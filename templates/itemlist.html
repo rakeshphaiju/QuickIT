@@ -22,7 +22,7 @@
           
           <div>
               {% for item in items%}              
-             <p> <img src="" height="" width="">
+             <p> <img src="{{ item.item_image.url }}" height="100" width="100"><br>
                 Item:{{ item.item_name }} <br>
                 Sender name: {{ item.sender_name }}<br> 
                 Sender contact no:{{ item.sender_no }} <br>

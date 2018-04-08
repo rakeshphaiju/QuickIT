@@ -1,6 +1,7 @@
 from django.db import models
 
 class Item(models.Model):
+    item_image = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
     item_name = models.CharField(max_length=200)
     sender_name = models.CharField(max_length=200)
     sender_no = models.FloatField(null=True, blank=True, default=0.0)

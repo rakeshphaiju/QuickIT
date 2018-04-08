@@ -122,4 +122,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
      os.path.join(BASE_DIR, "static"),
 ]
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
+MEDIA_URL = '/media/'
+MEDIA_ROOT =  'media_cdn'
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
