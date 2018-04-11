@@ -22,3 +22,6 @@ class MyProfile(TemplateView):
 
 class MyResponsibilities(TemplateView):
     template_name= "responsibilities.html"
+
+class AboutUs(TemplateView):
+    template_name= "aboutus.html"
