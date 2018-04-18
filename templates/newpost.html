@@ -1,0 +1,16 @@
+
+{% extends "header.html" %}
+<title>{% block tittle %}Make a new post{% endblock %}</title>
+
+{% block a %}
+
+<div class="container">
+        <div class="row">
+          <form method="POST" action="">
+            {% csrf_token %}
+            {{ form }}
+            
+            <button type="submit" class="btn btn-default" value="Save">Submit</button>
+          </form>
+        </div>
+        {% endblock %}
