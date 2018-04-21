@@ -1,11 +1,13 @@
 from django.views import generic
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from django.http import HttpResponseRedirect
 from carrier.models import Item 
-#from .forms import ItemForm 
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views import generic
+from django.views.generic import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+
+
+#from .forms import ItemForm 
 # Create your views here.
 class HomePageView(TemplateView):
     def get(self, request):
@@ -42,7 +44,30 @@ class AboutUs(TemplateView):
         #        args = {'form' : form}
          #    return render(request,'newpost.html',args)
 
-class ProductEntry(CreateView):
+class MyPost(TemplateView):
+    def get(self, request):
+        context = {}
+        # code to query the database goes here!
+        items = Item.objects.all()
+        # add data to context
+        context["items"] = items 
+        return render(request, 'mypost.html', context)
+
+
+class ItemEntry(CreateView):
     model = Item
     fields = ['item_name', 'sender_name', 'sender_no', 'receiver_name', 'receiver_no', 
             'pickup_place', 'dropoff_place', 'pickup_date', 'delivery_price', 'item_image']
+# view for deleting a product entry
+class ItemDelete(DeleteView):
+  model = Item
+ # the delete button forwards to the url mentioned below.
+  success_url = reverse_lazy('carrier:my-post')
+
+ 
+
+# view for the product update page
+class ItemUpdate(UpdateView):
+    model = Item
+    fields = ['item_name', 'sender_name', 'sender_no', 'receiver_name', 'receiver_no', 'pickup_place', 'dropoff_place', 'pickup_date', 'delivery_price', 'item_image']   
+ 

@@ -16,7 +16,7 @@ class Item(models.Model):
     item_image = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
 
     def get_absolute_url(self):
-        return reverse('item-list')
+        return reverse('carrier:item-list')
 
     def __str__(self):
         return self.item_name + ' - ' + self.sender_name
