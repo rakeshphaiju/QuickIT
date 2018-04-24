@@ -1,0 +1,39 @@
+{% extends "header.html" %}
+
+<title>{% block tittle %}My post{% endblock %}</title>
+{% block a%}
+
+          <div>
+          {% if items %}
+              {% for item in items %}
+             <p> <img src="{{ item.item_image.url }}" height="100" width="100"><br>
+                Item:{{ item.item_name }} <br>
+                Sender name: {{ item.sender_name }}<br>
+                Sender contact no:{{ item.sender_no }} <br>
+                Receiver name: {{ item.receiver_name }}<br>
+                Receiver contact no:{{ item.receiver_no }} <br>
+                Pick up place :{{ item.pickup_place }}<br>
+                Drop off place: {{ item.dropoff_place }}<br>
+                Pick up date:{{ item.pickup_date }}<br>
+                Delivery price:{{ item.delivery_price }}
+             </p>
+                    <form action="{% url 'carrier:item-delete' item.id  %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-default btn-sm">Delete</button>
+        </form>
+
+         <form action="{% url 'carrier:item-update' item.id  %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-default btn-sm">Update</button>
+        </form>
+
+
+              {% endfor %}
+          </div>
+
+
+{% endif %}
+
+
+
+  {% endblock %}

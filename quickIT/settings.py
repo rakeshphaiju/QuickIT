@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'carrier.apps.CarrierConfig',
+    'responsibility',
+    'account',
     
 ]
 
@@ -128,3 +130,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT =  'media_cdn'
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
+LOGIN_REDIRECT_URL = '/'

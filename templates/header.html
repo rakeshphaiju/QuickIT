@@ -2,33 +2,50 @@
 <html>
     <head>
     <title>{% block tittle %}Home{% endblock %}</title>
-   
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
-   
+
     </head>
-    <body>
+    <body style="background:linear-gradient(to bottom,#ffffff 0%, #ccffff 100%)">
     <nav class="navbar navbar-default">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="#">QuickIT</a>
+            <div class="container-fluid" style="background:beige">
+              <div class="navbar-header ">
+                <a class="navbar-brand" href="#">
+                  <img class="logo"  src= "https://cdn1.iconfinder.com/data/icons/logistics-delivery-set-3/512/37-512.png" />
+
+                  </a>
+                  <a class="navbar-brand" href="#" style="font-weight:bold; color:black; font-size:-webkit-xxx-large" >QuickIT</a></li>
               </div>
-              <ul class="nav navbar-nav">
+              <ul class="nav navbar-nav pull-right" style="margin-right:8em;">
                  <li>
 
-                 <a href="/item/entry/" >New Post</a></li>
-                  <li><a href="/itemlist/">Public posts</a></li>
-                  <li><a href="/mypost/">My Post</a></li>
-                <li><a href="/profile/">My profile</a></li>
-                <li><a href="/responsibilities/">My responsibilities</a></li>
+                 <a href="/item/entry/" >Add New Post</a></li>
+                  <li><a href="/">Public posts</a></li>
+
                 <li><a href="/aboutus/">About QuickIT</a></li>
-                
+              
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="glyphicon glyphicon-th"></span></a>
+        <ul class="dropdown-menu" style="background:beige">
+          <li><a href="/mypost/">My Post</a></li>
+        <li><a href="/profile/">My profile</a></li>
+
+        <li><a href="/responsibilities/">My responsibilities</a></li>
+        <li><a href="/logout/"> Logout </a></li>
+        </ul>
+      </li>
+
 
               </ul>
             </div>
           </nav>
+        </body>
        {% block a %}
-    
+
      {% endblock %}

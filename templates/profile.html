@@ -3,16 +3,79 @@
 <title>{% block tittle %}My Profile{% endblock %}</title>
 
      {% block a %}
+     <div class="container">
+            <div class="row">
 
-          <div>
-             <p> <img src="" height="" width=""><br>
-                Full name: <br>
-                Email address: <br> 
-                Contact no: <br>
-                Address: <br> 
-                Occupation: <br>
-              
-             </p>
-              <button type="button">Edit profile </button>
-          </div>
+              <div class="col-md-12" >
+
+
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Kamal Lamsal</h3>
+                    <!-- <span class="panel-title pull-right pulltop">
+                            <A href="#" >Edit Profile</a>   |
+                         <A href="#" >Logout</a>
+                    </span> -->
+                  </div>
+                  <div class="panel-body">
+                    <div class="row profile">
+                      <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://www.atomix.com.au/media/2015/06/atomix_user31.png" class="img-circle img-responsive"> </div>
+
+                      <div class=" col-md-9 col-lg-9 ">
+                        <table class="table table-user-information">
+                          <tbody>
+                            <tr>
+                              <td>Full Name</td>
+                              <td>Kamal Lamsal</td>
+                            </tr>
+                            <tr>
+                              <td>Email</td>
+                              <td>aroma.kamal@gmail.com</td>
+                            </tr>
+                            <tr>
+                              <td>Contact no   </td>
+                              <td>1234456789</td>
+                            </tr>
+
+
+                                   <tr>
+                              <td>Address</td>
+                              <td>Hanhitie 17 k A20</td>
+                            </tr>
+                              <tr>
+                              <td>Total Delivery done</td>
+                              <td>7</td>
+                            </tr>
+                            <tr>
+                              <td>Total Earning</td>
+                              <td>85 euro</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                      </div>
+                    </div>
+                  </div>
+
+     <!-- <div class="container">
+         <div class="row profile">
+             <div class="col-md-4">
+                <img src="" alt="profile not found">
+             </div>
+
+             <div class="col-md-4">
+                    Full name: <br>
+                    Email address: <br>
+                    Contact no: <br>
+                    Address: <br>
+                    Occupation: <br>
+                </div>
+                <div class="col-md-3">
+                        <button type="button">Edit profile </button>
+                 </div>
+         </div>
+     </div> -->
+
+
           {% endblock %}

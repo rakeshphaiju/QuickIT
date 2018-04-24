@@ -1,20 +1,46 @@
-
 {% extends "header.html" %}
 <title>{% block tittle %}Responsibilities{% endblock %}</title>
 
      {% block a %}
 
-          
-          <div>
-              <p> <img src="" height="" width="">Item: <br>
-                 Sender name: <br> 
-                 Sener contact no: <br>
-                 Receiver name: <br> 
-                 Receiver contact no: <br>
-                 Pick up place :<br>
-                 Drop off place <br>
-                 Pick up date:<br>
-              </p>
-               <button type="button">Delivered </button>
-           </div>
+     <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="row post">
+
+                        <div class="col-md-4 image">
+                                    <h3> Charger</h3>
+                                    <img src = "https://www.extremetech.com/wp-content/uploads/2016/08/Anker-Car-Charger.jpg">
+
+                            </div>
+                       <div class="col-md-4">
+                        <h3>From </h3>
+                        Sender name: Juka Laiitinen  <br>
+                        Sender contact no: 045658586  <br>
+
+                        Pick up place : Kajanintie 40C    <br>
+
+                        Pick up date: 20 April <br>
+                        Delivery price: 4.99 euro
+                        <span class="button">
+                                <button class="btn btn-primary" type="button">Delivered </button>
+                            </span>
+                    </div>
+                    <div class="col-md-4">
+                            <h3>To </h3>
+                            Receiver name: Rebecca Toivo <br>
+                            Receiver contact no: 042542424    <br>
+                            Drop off place: Muotikatu 7A 20    <br>
+                       </div>
+
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
            {% endblock %}

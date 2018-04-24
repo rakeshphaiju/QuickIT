@@ -1,9 +1,24 @@
-{% for field in form %}
-    <div class="">
+
+
+    <div class="container box">
+      <div class="row ">
+        <h1 style="text-align:center; display:block; margin-bottom: 1em"> &nbsp; &nbsp; &nbsp;  </h1>
+        {% for field in form %}
         <div >
             <span class="">{{ field.errors }}</span>
         </div>
-        <label  >{{ field.label_tag }}</label>
-        <div class="">{{ field }}</div>
+        <div class="col-sm-4 clearfix"> </div>
+        <div class="col-sm-4">
+        <table>
+          <tr>
+        <th><label  >{{ field.label_tag }}</label></th>
+        </tr>
+        <tr>
+        <td class="">{{ field }}</td>
+      </tr>
+        <table>
+        </div>
+          <div class="col-sm-4 clearfix"> </div>
+        </div>
     </div>
 {% endfor %}

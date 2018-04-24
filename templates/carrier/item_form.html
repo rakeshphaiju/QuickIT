@@ -2,15 +2,15 @@
 
 <title>{% block tittle %}Make a new post{% endblock %}</title>
 {% block a%}
- 
+
 {% if error_message %}
     <p><strong>{{ error_message }}</strong></p>
 {% endif %}
 <form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {% include 'carrier/form-template.html' %}
-    <div class="">
-        <div class="">
+    <div class="container">
+        <div class="row">
             <button type="submit" class="btn btn-success">Submit</button>
         </div>
     </div>

@@ -1,10 +1,11 @@
+from django.contrib.auth.models import User
 from django.forms import ModelForm
-from .models import Item
-
-class ItemForm(forms.ModelForm):
+from django import forms
 
 
-    class Meta: 
-        model = Item
-        #fields = ("item_image", "item_name", "sender_name", "sender_no", "receiver_name", "receiver_no", "pickup_place", "dropoff_place", "pickup_date", "delivery_price",]
-        fields = '_all_'
+class UserForm(forms.ModelForm):
+	password = forms.CharField(widget=forms.PasswordInput)
+
+	class Meta: 
+		model = User
+		fields = ('username', 'email', 'password',)

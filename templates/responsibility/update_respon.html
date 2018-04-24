@@ -1,0 +1,10 @@
+<form method="POST" action="{% url 'responsibility:update' %}" class="form"> {% csrf_token%}
+<input type="hidden" name='item_id' value='{{ item.id }}'/>
+ {% if item in responsibility.items.all %}
+                  <h2>Delivery on progess</h2>
+                {% else %}
+                 <span class="button">
+                        <button class="btn btn-primary" type="button">I will deliver </button>
+                    </span>
+                
+</form> {% endif %}  
